@@ -19,12 +19,12 @@ const ChatComponent = () => {
 
     useEffect(() => {
         // Initialize socket connection
-        const newSocket = io('http://localhost:3000');
+        const newSocket = io('http://localhost:8000');
         setSocket(newSocket);
 
         // Socket event listeners
         newSocket.on('connect', () => {
-            console.log('Connected to WebSocket server');
+            console.log('connect');
         });
 
         newSocket.on('disconnect', () => {
